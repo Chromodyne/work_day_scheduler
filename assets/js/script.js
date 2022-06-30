@@ -93,9 +93,15 @@ function colorPastHours(hour) {
 function colorFutureHours(hour) {
 
     //TODO: Too many magic numbers. Clean this up.
-    for (let i = currentHour * 100  + 100; i <= 1700; i += 100) {
+    //This loops through the IDs of the time slots and colors them if they are greater than the current hour.
+    for (let i = hour * 100  + 100; i <= 1700; i += 100) {
         let current = document.getElementById(i);
         current.classList.add("future");
     }
+
+}
+
+//TODO: This function will be used to save entered time-slot data into local storage.
+function saveTimeSlot() {
 
 }
