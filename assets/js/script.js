@@ -7,6 +7,13 @@ let currentHour = m.hour();
 //Changes header text to show current weekday, month, and day using moment.js
 document.getElementById("currentDay").textContent = m.format("dddd, MMMM Do");
 
+
+//Sets up click event listeners for all elements with the saveBtn class. 
+document.querySelectorAll(".saveBtn").forEach(button => {
+    button.addEventListener("click", saveTimeSlot);
+});
+
+
 changeColorByTime();
 
 //This function changes the colors of the description field based on the current hour.
@@ -102,6 +109,7 @@ function colorFutureHours(hour) {
 }
 
 //TODO: This function will be used to save entered time-slot data into local storage.
-function saveTimeSlot() {
+function saveTimeSlot(event) {
+    console.log("Clicked");
 
 }
