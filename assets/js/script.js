@@ -2,8 +2,7 @@
 let m = moment();
 
 //Gets the current hour from the momentJS api to determine description colors.
-let currentHour = 12;
-//m.hour();
+let currentHour = m.hour();
 
 //Changes header text to show current weekday, month, and day using moment.js
 document.getElementById("currentDay").textContent = m.format("dddd, MMMM Do");
@@ -75,6 +74,8 @@ function changeColorByTime() {
 }
 
 function colorPastHours() {
+
+
 
 }
 
