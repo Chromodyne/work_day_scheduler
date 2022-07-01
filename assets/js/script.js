@@ -7,16 +7,15 @@ let currentHour = m.hour();
 //Changes header text to show current weekday, month, and day using moment.js
 document.getElementById("currentDay").textContent = m.format("dddd, MMMM Do");
 
-
 //Sets up click event listeners for all elements with the saveBtn class. 
 document.querySelectorAll(".saveBtn").forEach(button => {
     button.addEventListener("click", saveTimeSlot);
 });
 
-
 changeColorByTime();
 
-//This function changes the colors of the description field based on the current hour.
+//This function changes the colors of the description field based on the current hour. Default will be selected
+//if outside of business hours.
 function changeColorByTime() {
     
     //TODO: Cleanup this by consolidating into a function that takes a parameter if possible.
@@ -78,7 +77,8 @@ function changeColorByTime() {
             break;
 
         default:
-            console.log("Default case detected.")
+            console.log("Outside of business hours.")
+            outsideHours(currentHour);
             break;
         
     }
@@ -99,11 +99,32 @@ function colorPastHours(hour) {
 //This function is invoked to give all future elements a new class.
 function colorFutureHours(hour) {
 
-    //TODO: Too many magic numbers. Clean this up.
     //This loops through the IDs of the time slots and colors them if they are greater than the current hour.
     for (let i = hour * 100  + 100; i <= 1700; i += 100) {
         let current = document.getElementById(i);
         current.classList.add("future");
+    }
+
+}
+
+//This function runs if the current hour is outside of business hours to style the text areas accordingly.
+function outsideHours(hour) {
+
+    //If it is past past 5PM but not midnight, style everything as it is in the past.
+    if (hour > 17 && hour != 0) {
+        
+        for (let i = 900; i <= 1700; i += 100) {
+            let current = document.getElementById(i);
+            current.classList.add("past");
+        }
+
+    //If it is past midnight but before 9AM. style everything as it is in the future.
+    } else if (hour >= 0 && hour < 9) {
+
+        for (let i = 900; i <= 1700; i += 100) {
+            let current = document.getElementById(i);
+            current.classList.add("future");
+        }
     }
 
 }
