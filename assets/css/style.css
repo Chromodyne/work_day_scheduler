@@ -57,7 +57,10 @@ textarea.form-control {
   color: #000000;
   border-top: 1px dashed #000000;
   font-size: 20px;
+  align-items: center;
 }
+
+
 
 .past {
   background-color: #d3d3d3;
@@ -93,4 +96,8 @@ textarea.form-control {
   font-size: 20px;
   filter: grayscale(40%);
   cursor: pointer;
+}
+
+.last {
+  border-bottom: 1px dashed black;
 }
