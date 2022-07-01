@@ -130,7 +130,49 @@ function outsideHours(hour) {
 }
 
 //TODO: This function will be used to save entered time-slot data into local storage.
+//Need to get the info from the corresponding slot and then use that to determine where to store.
 function saveTimeSlot(event) {
-    console.log("Clicked");
+
+    let buttonClicked = event.target.id;
+
+    switch (buttonClicked) {
+        case "click0":
+            console.log("Clicked button 0.");
+            saveToLocal(9);
+            break;
+        case "click1":
+            console.log("Clicked button 1.");
+            break;
+        case "click2":
+            console.log("Clicked button 2.");
+            break;
+        case "click3":
+            console.log("Clicked button 3.");
+            break;
+        case "click4":
+            console.log("Clicked button 4.");
+            break;
+        case "click5":
+            console.log("Clicked button 5.");
+            break;
+        case "click6":
+            console.log("Clicked button 6.");
+            break;
+        case "click7":
+            console.log("Clicked button 7.");
+            break;
+        case "click8":
+            console.log("Clicked button 8.");
+            break;
+        default:
+            console.log("Invalid button error.");
+            break;
+    }
+
+}
+
+function saveToLocal(clickid) {
+    
+    
 
 }
