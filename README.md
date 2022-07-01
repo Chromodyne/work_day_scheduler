@@ -8,7 +8,7 @@ With our hectic lives wouldn't it be nice to have a simple, lightweight app to p
 
 ## Live Website ##
 
-
+https://chromodyne.github.io/work_day_scheduler/
 
 ## Screenshot ##
 
