@@ -137,33 +137,77 @@ function saveTimeSlot(event) {
 
     switch (buttonClicked) {
         case "click0":
-            console.log("Clicked button 0.");
-            saveToLocal(9);
+
+            let saveText9 = document.getElementById("9").value;
+
+            localStorage.setItem(9, saveText9);
+
             break;
+
         case "click1":
-            console.log("Clicked button 1.");
+
+            let saveText10 = document.getElementById("10").value;
+
+            localStorage.setItem(10, saveText10);
+
             break;
+
         case "click2":
-            console.log("Clicked button 2.");
+
+            let saveText11 = document.getElementById("11").value;
+
+            localStorage.setItem(11, saveText11);
+
             break;
+
         case "click3":
-            console.log("Clicked button 3.");
+
+            let saveText12 = document.getElementById("12").value;
+
+            localStorage.setItem(12, saveText12);
+
             break;
+
         case "click4":
-            console.log("Clicked button 4.");
+
+            let saveText13 = document.getElementById("13").value;
+
+            localStorage.setItem(13, saveText13);
+
             break;
+
         case "click5":
-            console.log("Clicked button 5.");
+
+            let saveText14 = document.getElementById("14").value;
+
+            localStorage.setItem(14, saveText14);
+           
             break;
+
         case "click6":
-            console.log("Clicked button 6.");
+
+            let saveText15 = document.getElementById("15").value;
+
+            localStorage.setItem(15, saveText15);
+
             break;
+
         case "click7":
-            console.log("Clicked button 7.");
+
+            let saveText16 = document.getElementById("16").value;
+
+            localStorage.setItem(16, saveText16);
+
             break;
+
         case "click8":
-            console.log("Clicked button 8.");
+
+            let saveText17 = document.getElementById("17").value;
+
+            localStorage.setItem(17, saveText17);
+
             break;
+
         default:
             console.log("Invalid button error.");
             break;
@@ -171,8 +215,24 @@ function saveTimeSlot(event) {
 
 }
 
+//TODO: This will be used to generalize the logic of saveTimeSlot;
 function saveToLocal(clickid) {
-    
     
 
 }
+
+//This function will load the relevant data from localStorage when the page is first opened or reloaded.
+function loadFromLocal() {
+
+    for (let i = 9; i <= 17; i++) {
+
+        if (localStorage.getItem(i) !== null) {
+            document.getElementById(i).value = localStorage.getItem(i);
+        }
+
+    }
+
+}
+
+//Load the values from local storage on page load or reload.
+loadFromLocal();

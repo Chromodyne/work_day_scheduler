@@ -4,6 +4,10 @@ body {
   line-height: 1;
 }
 
+header.jumbotron {
+  margin-bottom: 0px;
+}
+
 textarea.form-control {
   background: transparent;
   border: none;
@@ -91,4 +95,9 @@ textarea.form-control {
 
 .last {
   border-bottom: 1px dashed black;
+}
+
+.save-msg {
+  font-weight: 600;
+  font-size: 18px;
 }
