@@ -4,13 +4,29 @@ body {
   line-height: 1;
 }
 
-textarea {
+textarea.form-control {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+}
+
+/* This is temporary for testing purposes. */
+
+/* .form-control {
+  background: #d3d3d3;
+  background-color: #d3d3d3;
+} */
+
+.input-group {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form-control:focus {
+  background-color: transparent;
 }
 
 .jumbotron {
@@ -40,7 +56,6 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-  border-right: 1px solid #000000;
   font-size: 20px;
 }
 
