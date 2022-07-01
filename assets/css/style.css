@@ -97,7 +97,9 @@ textarea.form-control {
   border-bottom: 1px dashed black;
 }
 
-.save-msg {
+#save-msg {
   font-weight: 600;
   font-size: 18px;
+  margin-top: 10px;
+  display: none;
 }
