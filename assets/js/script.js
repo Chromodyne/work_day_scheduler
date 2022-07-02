@@ -137,7 +137,7 @@ function outsideHours(hour) {
 //to local storage.
 function saveTimeSlot(event) {
 
-    let buttonClicked = event.target.id;
+    let buttonClicked = event.currentTarget.id;
 
     //Checks the id of which button was clicked and saves the user's text into local storage.
     //Numbers used for ease of loading.
@@ -230,7 +230,6 @@ function loadFromLocal() {
 //localStorage.
 function saveMessage() {
 
-    
     //Make text visible by changing display property.
     document.getElementById("save-msg").style.display = "block";
    
